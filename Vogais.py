@@ -1,15 +1,22 @@
-for frequencia in range (0, 22):
-    print(f"Frequência é {frequencia}")
+'''Desenvolvam um programa que conte quantas vogais (a, e, i, o, u) existem em uma palavra fornecida pelo usuário.
 
-    presenca = input("O aluno veio hoje? ")
-    if frequencia != 21:
-        if presenca == "Sim":
-            frequencia += 1
+Implementem uma função que receba uma palavra qualquer (string) como entrada.
+O programa deve imprimir o número total de vogais na palavra.
+Solicitação de Entrada:
 
-            print('VOCÊ ESTÁ PARTICIPANDO DA NOSSA PROMO TREINA JUNTO')
+Implementem a solicitação de entrada de uma palavra (string).
+Contagem de Vogais:
 
-            print(f"A frequencia atual é {frequencia}.")
-        elif presenca == "não":
-            break
-    elif frequencia == 21:
-        print('UHUU. AGORA VOCÊ PODE PRESENTEAR UM AMIGO OU AMIGA PARA TREINAR COM VOCÊ')
+Implemente um loop "for" ou "while" para percorrer cada caractere da palavra.
+Verifique se cada caractere é uma vogal (a, e, i, o, u) e conte-as.
+Imprima o número total de vogais na palavra. '''
+
+contagem_vogais = 0
+palavra = str(input("Digite uma palavra: "))
+
+for letra in palavra:
+    if letra.lower() in ['a', 'e', 'i', 'o', 'u']:
+        contagem_vogais += 1
+    break
+
+print(f"O número total de vogais na palavra '{palavra}' é: {contagem_vogais}")
